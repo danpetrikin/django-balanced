@@ -17,11 +17,11 @@ middlware_clss = getattr(settings, 'MIDDLEWARE_CLASSES', ())
 installed_apps += (
     'django_balanced',
 )
-ctx_processors = [
+ctx_processors += (
     'django_balanced.context_processors.balanced_library',
     'django_balanced.context_processors.balanced_settings',
     'django.contrib.auth.context_processors.auth',
-]
+)
 middlware_clss += (
     'django_balanced.middleware.BalancedMiddleware',
 )
